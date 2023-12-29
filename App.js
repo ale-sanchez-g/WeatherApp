@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
 import SimpleButton from './buttons/SimpleButton';
-import CloudButton from './buttons/CloudButton';
+import CloudImage from './img/CloudImg';
 
 const App = () => {
   const [buttonPosition, setButtonPosition] = useState({ left: 100, top: 300 });
@@ -20,13 +20,13 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Expo Weather App</Text>
+      <Text>Wheather Application</Text>
       <SimpleButton
         onPress={handleButtonPress}
-        title="Press Me"
+        title="Check how it changes"
         position={{ left: buttonPosition.left, top: buttonPosition.top }}
       />
-      <CloudButton />
+      <CloudImage />
     </View>
   );
 };
