@@ -1,20 +1,43 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// App.js
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import SimpleButton from './buttons/SimpleButton';
+import CloudButton from './buttons/CloudButton';
 
-export default function App() {
+const App = () => {
+  const [buttonPosition, setButtonPosition] = useState({ left: 100, top: 300 });
+
+  const handleButtonPress = () => {
+    const screenWidth = Dimensions.get('window').width;
+    const screenHeight = Dimensions.get('window').height;
+
+    // Generate random positions within the screen dimensions
+    const newLeft = Math.floor(Math.random() * (screenWidth - 100));
+    const newTop = Math.floor(Math.random() * (screenHeight - 100));
+
+    setButtonPosition({ left: newLeft, top: newTop });
+  };
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>Expo Weather App</Text>
+      <SimpleButton
+        onPress={handleButtonPress}
+        title="Press Me"
+        position={{ left: buttonPosition.left, top: buttonPosition.top }}
+      />
+      <CloudButton />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#2c3e50', // Dark grey background color
   },
 });
+
+export default App;
