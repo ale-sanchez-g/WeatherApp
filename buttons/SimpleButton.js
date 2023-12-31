@@ -12,8 +12,6 @@ const SimpleButton = ({ onPress, title, position }) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#ecf0f1', // Light gray for the cloud background
-    backgroundColor: '#ecf0f1', // Light gray for the cloud background
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 50, // Increase the borderRadius to create a circular shape
