@@ -17,14 +17,12 @@ const styles = StyleSheet.create({
     borderRadius: 50, // Increase the borderRadius to create a circular shape
     borderWidth: 6,
     borderColor: '#bdc3c7', // Border color for a more defined cloud shape
-    position: 'absolute',
-    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonText: {
     color: '#3498db', // Blue for the text color
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: 'bold',
   },
 });

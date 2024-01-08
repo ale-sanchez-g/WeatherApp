@@ -61,12 +61,13 @@ const RegistrationForm = () => {
           </Text>
         ))}
       </View>
-      <SimpleButton
-        onPress={handleRegistration}
-        title="Register"
-        position={{ top: 100 }}
-      />
-      <SimpleButton
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+        <SimpleButton
+          onPress={handleRegistration}
+          title="Register"
+          position={{ top: 50 }}
+        />
+        <SimpleButton
         onPress={() => {
           setUsername("");
           setPassword("");
@@ -74,8 +75,9 @@ const RegistrationForm = () => {
           setPasswordWarning("");
         }}
         title="Clear"
-        position={{ top: 180 }}
+        position={{ top: 50 }}
       />
+      </View>
       {passwordWarning ? (
         <Text style={styles.warning}>{passwordWarning}</Text>
       ) : null}
