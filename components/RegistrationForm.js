@@ -15,7 +15,7 @@ const RegistrationForm = () => {
     "Includes at least one lowercase letter (a-z)",
     "Includes at least one uppercase letter (A-Z)",
     "Includes at least one digit (0-9)",
-    "Includes at least one special character from @$!%*?&",
+    "Includes at least one special character from -@$!%*?&",
   ];
 
   const handleRegistration = () => {
