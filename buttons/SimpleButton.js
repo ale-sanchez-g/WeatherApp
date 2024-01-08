@@ -12,7 +12,7 @@ const SimpleButton = ({ onPress, title, position }) => {
 
 const styles = StyleSheet.create({
   button: {
-    paddingVertical: 15,
+    paddingVertical: 10,
     paddingHorizontal: 30,
     borderRadius: 50, // Increase the borderRadius to create a circular shape
     borderWidth: 6,

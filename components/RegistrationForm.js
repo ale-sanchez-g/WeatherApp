@@ -34,6 +34,9 @@ const RegistrationForm = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={{ color: "white", fontSize: 20, fontWeight: "bold" }}>
+        Registration Form
+      </Text>
       <TextInput
         style={styles.input}
         placeholder="Username"
@@ -65,7 +68,7 @@ const RegistrationForm = () => {
         <SimpleButton
           onPress={handleRegistration}
           title="Register"
-          position={{ top: 50 }}
+          position={{ top: 10 }}
         />
         <SimpleButton
         onPress={() => {
@@ -75,7 +78,7 @@ const RegistrationForm = () => {
           setPasswordWarning("");
         }}
         title="Clear"
-        position={{ top: 50 }}
+        position={{ top: 10 }}
       />
       </View>
       {passwordWarning ? (

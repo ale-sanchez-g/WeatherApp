@@ -1,9 +1,9 @@
 // passwordPolicy.js
 const passwordPolicy = {
     minLength: 8,
-    complexityRegex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
+    complexityRegex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_@$!%*?&])[A-Za-z\d-@$!%*?&]+$/,
     commonPasswords: ['password', '123456', 'qwerty', 'letmein'],
-    repeatingRegex: /(.)\1+/,
+    repeatingRegex: /(.)\2+/,
   };
   
   const isPasswordSecure = (password) => {
