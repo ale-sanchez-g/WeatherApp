@@ -34,18 +34,17 @@ const RegistrationForm = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={{ color: "white", fontSize: 20, fontWeight: "bold" }}>
-        Registration Form
-      </Text>
       <TextInput
         style={styles.input}
         placeholder="Username"
+        placeholderTextColor="green"
         value={username}
         onChangeText={(text) => setUsername(text)}
       />
       <TextInput
         style={styles.input}
         placeholder="Password"
+        placeholderTextColor="blue"
         secureTextEntry
         value={password}
         onChangeText={(text) => setPassword(text)}
@@ -53,6 +52,7 @@ const RegistrationForm = () => {
       <TextInput
         style={styles.input}
         placeholder="Confirm Password"
+        placeholderTextColor="blue"
         secureTextEntry
         value={confirmPassword}
         onChangeText={(text) => setConfirmPassword(text)}
@@ -101,7 +101,6 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 10,
     width: 300,
-    color: "white",
   },
   warning: {
     color: "red",
